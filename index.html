@@ -4,10 +4,15 @@
 		<title>Gar Relief</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+			font-size:13px;
+		}
 		.containshadow {
-				-webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
-				box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+				-webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
+				box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);
 				width: 1124px;
 		}
 		.headbackgrd {
@@ -26,7 +31,7 @@
 		}
 		.slogan {
 			padding-top: 20px;
-			width: 300px;			
+			width: 500px;			
 			padding-left: 260px;
 		}
 		.slogan * {
@@ -40,6 +45,41 @@
 		.slogan span {
 			position: relative;
 			left: 8px;
+		}
+		.mainpic {
+			width: 1124px;
+			height: 380px;
+			background: url(img/gr_mission.jpg) no-repeat;
+		}
+
+		.navbar {
+			margin-bottom: 0px;
+		}
+		.container .smallpic {
+			padding: 10px;
+		}
+		.container .smallpic .thumbnails {
+			margin: 0px;
+			margin-left: -3px;
+		}
+		.container .smallpic .thumbnail {
+			height: 224px;
+		}
+
+		.container .smallpic .thumbnails > li {
+			margin-left: 10px;
+		}
+		.container .smallpic .thumbnails img {
+			width: 200px;
+			cursor: pointer;
+		}
+		.container .smallpic h3 {
+			font-size: 17px;
+			line-height: 22px;
+			text-align: center;
+			margin: 0;
+			color: #8A8A8A;
+			font-weight: normal;
 		}
 		</style>
 	</head>
@@ -122,9 +162,64 @@
 					</div>
 				</div><!-- /navbar-inner -->
 			</div>
-			<p style="padding:0;margin:0;clear:both;"></p>
+			<div class="mainpic"></div>
+			<div class="smallpic">
+				<ul class="thumbnails">
+					<li>
+						<div class="thumbnail">
+							<img src="img/gr_mission_s.jpg" />
+							<div class="caption">
+								<h3>GAR RELIEF'S<br />MISSION</h3>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail">
+							<img src="img/elementary_school_s.jpg" />
+							<div class="caption">
+								<h3>GAR TAJUK<br />ELEMENTARY<br />SCHOOL</h3>
+							</div>							
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail">
+							<img src="img/clinic_s.jpg" />
+							<div class="caption">
+								<h3>BENDURYA CLINIC</h3>
+							</div>								
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail">
+							<img src="img/elder_care_s.jpg" />
+							<div class="caption">
+								<h3>ACHI ELDER CARE</h3>
+							</div>							
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail">
+							<img src="img/donate_s.jpg" />
+							<div class="caption">
+								<h3>DONATE</h3>
+							</div>								
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+		$(function(){
+			$('.smallpic img').each(function(){
+				var thisimg = $(this);
+				var filename = thisimg.attr('src').replace(/^.+\/|_s.jpg$/g,'');
+				thisimg.click(function(){
+					$('.mainpic').css('background', 'url(img/'+filename+'.jpg) no-repeat');
+				});
+			});
+		});
+		</script>
 	</body>
 </html>
