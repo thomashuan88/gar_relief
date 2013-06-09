@@ -91,6 +91,9 @@
 			display: block;
 			overflow: hidden;
 		}
+		.graycolor {
+			background: #eee;
+		}
 		</style>
 	</head>
 	<body>
@@ -150,24 +153,6 @@
 									</ul>
 								</li>
 							</ul>
-							<!--
-							<ul class="nav pull-right">
-								<li><a href="#">Link</a></li>
-								<li class="divider-vertical"></li>
-								<li class="dropdown">
-									<a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-										<li><a href="#">Something else here</a></li>
-										<li class="divider"></li>
-										<li class="nav-header">Nav header</li>
-										<li><a href="#">Separated link</a></li>
-										<li><a href="#">One more separated link</a></li>
-									</ul>
-								</li>
-							</ul>
-							-->
 						</div><!-- /.nav-collapse -->
 					</div>
 				</div><!-- /navbar-inner -->
@@ -222,11 +207,16 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script>
 		$(function(){
-			$('.smallpic img').each(function(){
+			var smallImg = $('.smallpic img');
+			smallImg.each(function(){
 				var thisimg = $(this);
 				var filename = thisimg.attr('src').replace(/^.+\/|_s.jpg$/g,'');
 				thisimg.wrap('<div class="imgout"></div>')
 				thisimg.click(function(){
+					smallImg.each(function(){
+						$(this).closest('.thumbnail').removeClass('graycolor');
+					})
+					thisimg.closest('.thumbnail').addClass('graycolor');
 					$('.mainpic').css('background', 'url(img/'+filename+'.jpg) no-repeat');
 				});
 			});
