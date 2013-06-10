@@ -96,16 +96,16 @@
 			background: #eee;
 		}
 		.mainpicInfo {
-			width: 450px;
+			width: 550px;
 			height: auto;
 			position: absolute;
-			top: 250px;
+			top: 150px;
 			right: 0px;
 		}
 		.mainpicInfo p {
 			color: white;
 			margin-right: 40px;
-			font-size: 30px;
+			font-size: 16px;
 			line-height: 30px;
 			font-style: italic;
 			text-align: right;			
@@ -132,6 +132,59 @@
 	        -ms-filter: progid:DXImageTransform.Microsoft.gradient(
 	          gradientType=1, startColor=0, endColoStr=#3b3b3b
 	        );		
+		}
+		.btn-position {
+			float: right;
+			margin-right: 40px;
+			margin-bottom: 10px;
+		}
+		.contentarea {
+			position: relative;
+		}
+		.contentarea .contentslice {
+			float: left;
+			margin-right: 19px;
+			margin-left: 20px;
+			width: 200px;
+
+		}
+		.contentarea .contentslice.notfirst {
+			margin-left: 0px;
+		}
+
+		.contentarea .contentslice .header {
+			color: #F79411;
+			font-weight: bold;
+			line-height: 28px;
+			font-size: 24px;
+			height: 66px;
+			display: table-cell;
+			vertical-align:bottom;
+		}
+
+		.contentarea .contentslice.contact {
+			position: absolute;
+			top: 0px;
+			float: none;
+			right: 0px;
+		}
+		.contentarea .contentslice img {
+			width: 200px;
+			height: 150px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.contentarea .contentslice.contact .header {
+			color: #114FF7;
+			font-size: 18px;
+		}		
+		.contentarea .contentslice .body {
+			padding-top: 10px;
+		}
+		.contentarea .contentslice.contact .body img {
+			width: 60px;
+			height: auto;
 		}
 		</style>
 	</head>
@@ -176,7 +229,7 @@
 										<li><a href="#">FUTURE VISION</a></li>
 									</ul>									
 								</li>
-								<li><a href="#">DONATE</a></li>
+								<li><a href="donate/donate.html">DONATE</a></li>
 								<li class="dropdown">
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#">LEARN MORE <b class="caret"></b></a>
 									<ul class="dropdown-menu">
@@ -198,14 +251,15 @@
 			</div>
 			<div class="mainpic">
 				<div class="mainpicInfo gradient">
-					<p>asdfasdfs<br />asdfasdfa</p>
+					<p>We are an international, all volunteer charitable organization.  Because volunteers and sponsors cover administrative expenses, 100% of your donation goes directly to benefit our projects and the Tibetan people.</p>
+					<a href="aboutus/our_mission.html" class="btn btn-large btn-position btn-warning">Read More</a>
 				</div>
 			</div>
 			<div class="smallpic">
 				<ul class="thumbnails">
 					<li>
 						<div class="thumbnail">
-							<img src="img/gr_mission_s.jpg" />
+							<img src="img/gr_mission_s.jpg" name="gr_mission" />
 							<div class="caption">
 								<h3>GAR RELIEF'S<br />MISSION</h3>
 							</div>
@@ -213,7 +267,7 @@
 					</li>
 					<li>
 						<div class="thumbnail">
-							<img src="img/elementary_school_s.jpg" />
+							<img src="img/elementary_school_s.jpg" name="elementary_school" />
 							<div class="caption">
 								<h3>GAR TAJUK<br />ELEMENTARY<br />SCHOOL</h3>
 							</div>							
@@ -221,7 +275,7 @@
 					</li>
 					<li>
 						<div class="thumbnail">
-							<img src="img/clinic_s.jpg" />
+							<img src="img/clinic_s.jpg" name="clinic" />
 							<div class="caption">
 								<h3>BENDURYA CLINIC</h3>
 							</div>								
@@ -229,7 +283,7 @@
 					</li>
 					<li>
 						<div class="thumbnail">
-							<img src="img/elder_care_s.jpg" />
+							<img src="img/elder_care_s.jpg" name="elder_care" />
 							<div class="caption">
 								<h3>ACHI ELDER CARE</h3>
 							</div>							
@@ -237,13 +291,84 @@
 					</li>
 					<li>
 						<div class="thumbnail">
-							<img src="img/donate_s.jpg" />
+							<img src="img/donate_s.jpg" name="donate" />
 							<div class="caption">
 								<h3>DONATE</h3>
 							</div>								
 						</div>
 					</li>
 				</ul>
+			</div>
+			<div class="contentarea">
+				<div class="contentslice">
+					<div class="header">
+						THE REGION<br />AND PEOPLE
+					</div>
+					<div class="body">
+						Gar Relief's current work is focused in and around the rural, improverished village of Tajuk in Nangchen County.  This are is remote and underdeveloped, with rugged mountains, rudimentary roads, and a harsh climate.  Except for limited solar panel capacity, the area has no electricity and no running water.  <a href="#">LEARN MORE</a>
+					</div>
+				</div>
+				<div class="contentslice notfirst">
+					<div class="header">
+						EDUCATION
+					</div>
+					<div class="body">
+						One of the best ways to build local communities is to educate the children.  We believe education, more than anything else, strengthens human capacity and helps people to take control of their lives and break poverty's vicious grip. <a href="#">LEARN MORE</a>
+					</div>
+				</div>
+				<div class="contentslice notfirst">
+					<div class="header">
+						HEALTH CARE
+					</div>
+					<div class="body">
+						People living Nangchen are exposed to a harsh, high-altitude climate with scant vegetation and poor nutrition, conditions that usually lead to overall general poor health. Yet basic healthcare for poor residents in remote villages is non-existent. <a href="#">LEARN MORE</a>
+					</div>
+				</div>
+				<div class="contentslice notfirst">
+					<div class="header">
+						ELDER CARE
+					</div>
+					<div class="body">
+						The elders of Tibet are the culture's wisdom bearers. These elders have lived through especially brutal periods of hardship, lack, and change over the last half century... <a href="#">LEARN MORE</a>
+					</div>
+				</div>
+				<p style="clear: both;padding:0;margin:0"></p>
+				<div class="contentslice">
+					<img src="img/foot1.jpg" />
+				</div>
+				<div class="contentslice notfirst">
+					<img src="img/foot2.jpg" />
+				</div>
+				<div class="contentslice notfirst">
+					<img src="img/foot3.jpg" />
+				</div>
+				<div class="contentslice notfirst">
+					<img src="img/foot4.jpg" />
+				</div>
+				<div class="contentslice notfirst contact">
+					<div class="header">
+						CONTACT
+					</div>
+					<div class="body">
+						<b>GAR RELIEF</b><br />
+						PO Box 25565<br />
+						Albuquerque,<br />
+						New Mexico 87125<br />
+						USA
+						info@garrelief.org<br />
+						<b>USA tel:</b><br />
+						1.505.242.6719
+					</div>
+					<div class="header">
+						STAY CONNECTED
+					</div>
+					<div class="body">
+						Subscribe to our<br />
+						newsletter.  Your privacy is<br />
+						safe with us.<br />
+						<img src="img/FacebookButton.gif" />
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="js/jquery.js"></script>
@@ -254,13 +379,51 @@
 			smallImg.each(function(){
 				var thisimg = $(this);
 				var filename = thisimg.attr('src').replace(/^.+\/|_s.jpg$/g,'');
-				thisimg.wrap('<div class="imgout"></div>')
+				var imgName = $(this).attr('name');
+				var mainInfo_opt = {
+					'gr_mission': {
+						txt: 'We are an international, all volunteer charitable organization.  Because volunteers and sponsors cover administrative expenses, 100% of your donation goes directly to benefit our projects and the Tibetan people.',
+						fontsize: '16px',
+						lineheight: '30px',
+						url: 'aboutus/our_mission.html'
+					},
+					'elementary_school': {
+						txt: 'You can transform a child\'s life',
+						fontsize: '24px',
+						lineheight: '26px',
+						url: 'projects/elementary_school.html'
+					},
+					'clinic': {
+						txt: 'Save a life',
+						fontsize: '36px',
+						lineheight: '38px',
+						url: 'projects/clinic.html'
+					},
+					'elder_care': {
+						txt: 'We are the elderly of the future',
+						fontsize: '24px',
+						lineheight: '26px',
+						url: 'projects/elder_care.html'
+					},
+					'donate': {
+						txt: 'Please give hope! You can make a different in their future life.',
+						fontsize: '16px',
+						lineheight: '30px',
+						url: 'projects/donate.html'
+					}
+				};
+
+				thisimg.wrap('<div class="imgout"></div>');
 				thisimg.click(function(){
 					smallImg.each(function(){
 						$(this).closest('.thumbnail').removeClass('graycolor');
 					})
 					thisimg.closest('.thumbnail').addClass('graycolor');
 					$('.mainpic').css('background', 'url(img/'+filename+'.jpg) no-repeat');
+					$('.mainpic .mainpicInfo').find('p').html(mainInfo_opt[filename].txt);
+					$('.mainpic .mainpicInfo').find('p').css('font-size', mainInfo_opt[filename].fontsize);
+					$('.mainpic .mainpicInfo').find('p').css('line-height', mainInfo_opt[filename].lineheight);
+					$('.mainpic .mainpicInfo').find('a').attr('href', mainInfo_opt[filename].url);
 				});
 			});
 		});
