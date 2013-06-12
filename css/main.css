@@ -1,6 +1,5 @@
-body {
-	font-family: 'Open Sans', sans-serif;
-	font-size:13px;
+* {
+	font-family: "Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif;
 }
 .dropdown-menu {
 	opacity:0.75;
@@ -61,6 +60,7 @@ body {
 	margin-left: -3px;
 }
 .container .smallpic .thumbnail {
+	width: 200px;
 	height: 199px;
 }
 
